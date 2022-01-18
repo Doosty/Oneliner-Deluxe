@@ -1,0 +1,5 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:int|default:0|min:0|max:15|resolveconflicts:_| */
+
+:root {
+    --uc-roundness: _px;
+}

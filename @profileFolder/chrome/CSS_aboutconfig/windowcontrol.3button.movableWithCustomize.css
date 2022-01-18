@@ -1,0 +1,9 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:true|min:_|max:_|resolveconflicts:windowcontrol.1button.movableWithCustomize[false]| */
+
+#uc-controlbutton-container {
+    display: -moz-box !important;
+}
+#uc-controlbutton-container .titlebar-button {
+    width: var(--uc-toolbar-height) !important;
+    padding: 0 !important;
+}

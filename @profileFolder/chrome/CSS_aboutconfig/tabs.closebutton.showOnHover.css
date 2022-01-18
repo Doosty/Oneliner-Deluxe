@@ -1,0 +1,5 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:_| */
+
+.tabbrowser-tab:hover .tab-close-button.close-icon {
+    display: initial !important;
+}

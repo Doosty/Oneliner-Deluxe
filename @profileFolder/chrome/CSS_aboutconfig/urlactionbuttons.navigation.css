@@ -1,0 +1,14 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:true|min:_|max:_|resolveconflicts:_| */
+
+
+
+/* metadata boolean pair separator: topside css applies when pref is True, bottomside css applies when pref is False (both/either can be empty/filled) */
+
+
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#stop-reload-button {
+    display: none !important;
+}

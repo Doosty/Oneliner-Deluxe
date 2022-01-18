@@ -1,0 +1,19 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:_| */
+
+#TabsToolbar {
+    margin-right: calc(min(var(--uc-navigationbar-width), var(--uc-navigationbar-maxwidth)) + 0px);
+}
+
+#navigator-toolbox > #nav-bar {
+    margin-left: calc(100vw - min(var(--uc-navigationbar-width), var(--uc-navigationbar-maxwidth)));
+}
+
+/* metadata boolean pair separator: topside css applies when pref is True, bottomside css applies when pref is False (both/either can be empty/filled) */
+
+#TabsToolbar {
+    margin-left: calc(min(var(--uc-navigationbar-width), var(--uc-navigationbar-maxwidth)) + 0px);
+}
+
+#navigator-toolbox > #nav-bar {
+    margin-right: calc(100vw - min(var(--uc-navigationbar-width), var(--uc-navigationbar-maxwidth)));
+}

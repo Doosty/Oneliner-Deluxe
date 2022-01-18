@@ -1,0 +1,77 @@
+/* Hiding elements */
+#customizableui-special-spring1,
+#customizableui-special-spring2,
+#tracking-protection-icon-container,
+#identity-box,
+#urlbar-label-box,
+#urlbar-search-mode-indicator,
+.titlebar-spacer,
+.private-browsing-indicator,
+.tab-close-button,
+#minMaxClose-button,
+#uc-controlbutton-container,
+.titlebar-buttonbox-container,
+#window-controls,
+#tabs-newtab-button {
+    display: none;
+}
+
+/* Urlbar box compacting */
+#urlbar[breakout],
+#urlbar[breakout][breakout-extend] {
+    width: 100% !important;
+    top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+    left: 0 !important;
+}
+#urlbar[breakout][breakout-extend] > #urlbar-input-container,
+#urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    width: 100% !important;
+    padding-block: unset !important;
+    padding-inline-end: 0px !important;
+    padding-inline-start: 5px !important;
+    transition: none !important;
+}
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
+    animation: none !important;
+}
+
+/* Menus compacting */
+menupopup > menuitem,
+menupopup > menu {
+    padding-block: 4px !important;
+    max-width: 30em !important;
+}
+:root {
+    --arrowpanel-menuitem-padding: 5px 4px !important;
+    --arrowpanel-menuitem-margin: 0px 4px !important;
+}
+
+/* Tabs compacting */
+:root {
+    --tab-block-margin: 0px !important;
+    --inline-tab-padding: 5px !important;
+}
+.tabbrowser-tab {
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+}
+.tab-stack {
+    margin: 0px 1px 0px 1px !important;
+    padding: 0px 0px 0px 0px !important;
+}
+
+/* Toolbar Button in nav bar compacting, depending on uidensity */
+#nav-bar toolbarbutton {
+    padding-inline: 0px;
+    --toolbarbutton-inner-padding: 8px 4px 8px 4px;
+    padding-left: 0px !important;
+    padding-right: 2px !important;
+}
+:root[uidensity='compact'] #nav-bar toolbarbutton {
+    --toolbarbutton-inner-padding: 6px 4px 6px 4px;
+}
+:root[uidensity='touch'] #nav-bar toolbarbutton {
+    --toolbarbutton-inner-padding: 9px 4px 9px 4px;
+}

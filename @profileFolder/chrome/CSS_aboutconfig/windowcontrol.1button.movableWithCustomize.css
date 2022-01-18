@@ -1,0 +1,5 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:windowcontrol.3button.movableWithCustomize[false]|  ontruesetpref */
+
+#minMaxClose-button {
+    display: -moz-box !important;
+}

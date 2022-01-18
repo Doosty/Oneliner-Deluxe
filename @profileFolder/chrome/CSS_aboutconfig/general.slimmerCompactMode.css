@@ -1,0 +1,31 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:true|min:_|max:_|resolveconflicts:_| */
+
+:root[uidensity='compact'] {
+    --uc-toolbar-height: 30px !important;
+
+    --uc-bm-height: 22px !important;
+}
+@media (min-resolution: 1.5dppx) {
+    :root[uidensity='compact'] {
+        --uc-highdpioffset: 1px !important;
+    }
+}
+
+:root[uidensity='compact'] #nav-bar-customization-target {
+    margin-top: 0px !important;
+}
+:root[uidensity='compact'] #urlbar-container {
+    padding: 0px !important;
+}
+:root[uidensity='compact'] #urlbar,
+:root[uidensity='compact'] #searchbar {
+    min-height: 20px !important;
+    --urlbar-height: 20px !important;
+}
+#scrollbutton-up,
+#scrollbutton-down {
+    padding: 0px !important;
+}
+.urlbar-page-action {
+    padding: 1px 3px 1px 3px !important;
+}

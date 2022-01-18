@@ -1,0 +1,3 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:_| */
+
+#navigator-toolbox:hover > #PersonalToolbar{  transition-delay: 100ms !important;  transform: rotateX(0deg);}

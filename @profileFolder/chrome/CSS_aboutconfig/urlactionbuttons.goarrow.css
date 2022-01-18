@@ -1,0 +1,6 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:_| */
+
+/* metadata boolean pair separator: topside css applies when pref is True, bottomside css applies when pref is False (both/either can be empty/filled) */
+#urlbar-go-button {
+    display: none !important;
+}

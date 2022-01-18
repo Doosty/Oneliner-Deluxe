@@ -1,0 +1,5 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:int|default:30|min:_|max:_|resolveconflicts:_| */
+
+:root {
+    --uc-navigationbar-width: _vw;
+}

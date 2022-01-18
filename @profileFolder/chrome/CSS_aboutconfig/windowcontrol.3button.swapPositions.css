@@ -1,0 +1,14 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:_| */
+
+#uc-controlbutton-container .titlebar-min {
+    -moz-box-ordinal-group: 3;
+}
+#uc-controlbutton-container .titlebar-max {
+    -moz-box-ordinal-group: 2;
+}
+#uc-controlbutton-container .titlebar-restore {
+    -moz-box-ordinal-group: 2;
+}
+#uc-controlbutton-container .titlebar-close {
+    -moz-box-ordinal-group: 1;
+}

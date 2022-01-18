@@ -1,0 +1,13 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:_| */
+
+.tab-background[selected]::before,
+.tabbrowser-tab:hover > stack > .tab-background::before {
+    height: 2px ;
+    display: -moz-box ;
+    content: '';
+}
+.tab-stack > .tab-background[selected]::before {
+    background-color: currentColor;
+    background-image: linear-gradient(var(--tab-line-color), var(--tab-line-color)) ;
+    margin: 1px;
+}

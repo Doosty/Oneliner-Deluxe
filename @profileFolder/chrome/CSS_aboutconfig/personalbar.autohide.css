@@ -1,0 +1,52 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:true|min:_|max:_|resolveconflicts:_| */
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_bookmarks_toolbar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Personal toolbar - hiding setup, repair background */
+#PersonalToolbar {
+  max-height: unset !important;
+  position: relative !important;
+  margin-bottom: calc(var(--uc-highdpioffset, 0px) - var(--uc-bm-height) - 2 * var(--uc-toolbarborder-height));
+
+  background-clip: inherit !important;
+  background-color: transparent !important;
+  background-position: top left, top left, var(--lwt-background-alignment, top left);
+  background-position-y: top, top, var(--uc-bg-y);
+  background-image: var(--toolbar-bgimage), linear-gradient(var(--toolbar-bgcolor), var(--toolbar-bgcolor)), var(--lwt-header-image, var(--lwt-additional-images)) !important;
+  background-repeat: no-repeat, no-repeat, var(--lwt-background-tiling);
+}
+
+/* Personal toolbar - hide when not in customize view */
+#PersonalToolbar:not([customizing]) {
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: transform 135ms linear 0ms !important;
+  z-index: 1;
+}
+/* Personal toolbar - unhide options are in userChrome.css */
+
+/* Personal toolbar - density, dpi, sizemode conditionals */
+:root[uidensity='compact'] {
+  --uc-bm-height: 22px;
+}
+:root {
+  --uc-bm-height: 28px;
+}
+:root[uidensity='touch'] {
+  --uc-bm-height: 34px;
+}
+
+@media (min-resolution: 1.5dppx) {
+  :root {
+    --uc-highdpioffset: 1px;
+    --uc-highdpioffsetTop: -0.5px;
+  }
+}
+
+[sizemode='normal'] #PersonalToolbar {
+  --uc-bg-y: calc(0px - var(--uc-toolbar-height) - var(--uc-toolbarborder-height));
+}
+[sizemode='maximized'] #PersonalToolbar {
+  --uc-bg-y: calc(-8px - var(--uc-toolbar-height) - var(--uc-toolbarborder-height));
+}

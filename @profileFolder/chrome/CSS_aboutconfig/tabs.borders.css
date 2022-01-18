@@ -1,0 +1,5 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:false|min:_|max:_|resolveconflicts:tabs.separators[false]| */
+
+.tab-background:not([selected='true']) {
+    border: 1px solid color-mix(in srgb, currentColor 30%, transparent) !important;
+}

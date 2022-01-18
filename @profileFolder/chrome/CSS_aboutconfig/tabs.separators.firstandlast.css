@@ -1,0 +1,12 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:true|min:_|max:_|resolveconflicts:_| */
+
+/* loads nothing but this comment when pref is true */
+
+/* metadata boolean pair separator: topside css applies when pref is True, bottomside css applies when pref is False (both/either can be empty/filled) */
+
+.tabbrowser-tab[first-visible-tab] {
+    border-left: none !important;
+}
+.tabbrowser-tab[last-visible-tab] {
+    border-right: none !important;
+}

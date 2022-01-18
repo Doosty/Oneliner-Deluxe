@@ -1,0 +1,169 @@
+/* Window dragging enabled for empty space around urlbar */
+toolbox,
+#urlbar-container {
+    -moz-window-dragging: drag !important;
+}
+
+/* Minimum window size */
+html {
+    min-width: 800px !important;
+    min-height: 80px !important;
+}
+
+/* Tab text doesnt partially fade when it gets too long */
+.tab-label-container[textoverflow]:not([pinned]) {
+    mask-image: none !important;
+    --tab-label-mask-size: 0px;
+}
+
+/* Hide line above urlbar */
+#nav-bar {
+    box-shadow: none !important;
+}
+
+/* Bookmarks menu same style as arrowpanel menus */
+menupopup[placespopup] {
+    -moz-appearance: none !important;
+    background-color: var(--arrowpanel-background) !important;
+    border: 1px solid var(--arrowpanel-border-color) !important;
+}
+
+/* Color fix on blank pages, helps with the infamous white/black flash */
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+#tabbrowser-tabpanels[pendingpaint],
+browser[type='content-primary'],
+browser[type='content'] > html {
+    background: var(--tabpanel-background-color, --in-content-page-background) !important;
+}
+
+/* Oneliner fix for colors */
+#nav-bar {
+    background: none !important;
+}
+/*#PersonalToolbar { background: none !important; }*/ /*only enable if you dont use autohiding */
+
+/* Fix for containers tab line */
+.tab-context-line {
+    margin-top: 0px !important;
+}
+
+/* Compact mode tweak for sound mute button */
+:root[uidensity='compact'] .tab-icon-image:not([pinned]) {
+    opacity: 1 !important;
+}
+:root[uidensity='compact'] .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+    top: -5.5px !important;
+    inset-inline-end: -6px !important;
+    border-radius: 10px !important;
+    stroke: var(--tab-icon-overlay-stroke, black) !important;
+    color: var(--tab-icon-overlay-fill, white);
+    fill-opacity: 0.9 !important;
+}
+.tab-icon-overlay[muted] {
+    color: red !important;
+}
+
+/* Tooltip adjustments */
+tooltip {
+    padding: 0px !important;
+    border-radius: var(--uc-roundness) !important;
+    background-color: var(--arrowpanel-background) !important;
+    border: 1px solid var(--arrowpanel-border-color) !important;
+}
+
+/* Personal toolbar widget buttons color */
+#PersonalToolbar .toolbarbutton-1 {
+    color: var(--lwt-text-color) !important;
+}
+
+/* Page action buttons which arent disabled show on urlbar hover */
+#page-action-buttons {
+    display: -moz-box !important;
+    -moz-window-dragging: no-drag !important;
+    width: 0px;
+    min-width: 0px;
+    opacity: 0;
+}
+#urlbar-container:hover #page-action-buttons {
+    opacity: 1;
+    width: 100%;
+}
+
+/* Urlbar highlighted background color */
+#urlbar-input::-moz-selection {
+    background-color: transparent !important;
+}
+/* Urlbar highlighted text color */
+#urlbar-input::-moz-selection {
+    color: color-mix(in srgb, var(--urlbar-popup-url-color) 80%, var(--focus-outline-color) 20%) !important;
+}
+
+/* Urlbar focused background color same as unfocused */
+[focused]#urlbar:not([breakout][breakout-extend]) > #urlbar-background {
+    background-color: var(--toolbar-field-background-color, currentColor) !important;
+}
+/* Urlbar focused text color same as unfocused */
+[focused]#urlbar {
+    color: var(--toolbar-field-color) !important;
+}
+
+/* Urlbar focus outline same as unfocused outline */
+#urlbar {
+    --toolbar-field-focus-border-color: var(--toolbar-field-border-color) !important;
+}
+
+/* Customize view overflow panel height fix */
+:root #customization-panel-container {
+    margin-top: calc(0px + var(--uc-toolbar-height) + var(--uc-toolbarborder-height)) !important;
+}
+
+/* Fix pinned tab notification dot visibility (by u/qaz69wsx https://old.reddit.com/r/FirefoxCSS/comments/p6dcch/overlay_notification_dot_over_favicon_on_pinned/)*/
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected='true']),
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected='true']) {
+    background-image: unset !important;
+}
+.tabbrowser-tab:is([image], [pinned]) > .tab-stack > .tab-content[attention]:not([selected='true']) .tab-icon-stack::before,
+.tabbrowser-tab > .tab-stack > .tab-content[pinned][titlechanged]:not([selected='true']) .tab-icon-stack::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--attention-icon-color);
+    box-shadow: 0 0 6px var(--attention-icon-color);
+    z-index: 1;
+}
+
+/* These have user pref variables */
+/* Tab roundness */
+:root {
+    --tab-border-radius: var(--uc-roundness) !important;
+}
+/* Toolbar buttons roundness */
+:root {
+    --toolbarbutton-border-radius: var(--uc-roundness) !important;
+}
+/* Menus roundness */
+:root {
+    --arrowpanel-border-radius: var(--uc-roundness) !important;
+}
+/* Context menu roundness */
+menupopup {
+    border-radius: var(--uc-roundness) !important;
+    --panel-border-radius: var(--uc-roundness) !important;
+}
+/* Toolbars border line */
+#navigator-toolbox {
+    border-bottom: var(--uc-toolbarborder-height) solid color-mix(in srgb, currentColor, transparent 70%) !important;
+}
+#PersonalToolbar {
+    border-top: none !important;
+    margin-top: calc(var(--uc-highdpioffsetTop, 0px) + var(--uc-toolbarborder-height));
+
+    /*border-top: var(--uc-toolbarborder-height) solid transparent !important;*/
+    border-bottom: var(--uc-toolbarborder-height) solid color-mix(in srgb, currentColor, transparent 70%) !important;
+}

@@ -1,0 +1,8 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:true|min:_|max:_|resolveconflicts:tabs.borders[false]| */
+
+.tabbrowser-tab {
+    border-left: 1px solid color-mix(in srgb, currentcolor 30%, transparent) !important;
+}
+.tabbrowser-tab[last-visible-tab] {
+    border-right: 1px solid color-mix(in srgb, currentcolor 30%, transparent) !important;
+}

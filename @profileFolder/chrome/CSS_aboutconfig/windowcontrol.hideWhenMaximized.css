@@ -1,0 +1,22 @@
+/* metadata firstline for 'css_aboutconfig_loader.uc.js' - |branch:onelinerdeluxe|type:bool|default:true|min:_|max:_|resolveconflicts:_| */
+
+#uc-controlbutton-container,
+#minMaxClose-button {
+    min-width: 0;
+    min-inline-size: 0px !important;
+    width: 3px;
+    opacity: 0;
+    transition: width 0ms linear 20ms;
+}
+#uc-controlbutton-container:hover,
+#main-window[sizemode='normal'] #uc-controlbutton-container,
+:root[customizing] #uc-controlbutton-container {
+    width: 100%;
+    opacity: 1;
+}
+#minMaxClose-button:hover,
+#main-window[sizemode='normal'] #minMaxClose-button,
+:root[customizing] #minMaxClose-button {
+    width: 100%;
+    opacity: 1;
+}
